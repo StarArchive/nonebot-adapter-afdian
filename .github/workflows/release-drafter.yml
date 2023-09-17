@@ -19,8 +19,6 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GH_TOKEN }}
 
       - name: Setup Node Environment
         uses: ./.github/actions/setup-node
@@ -44,9 +42,6 @@ jobs:
 
       - name: Setup Node Environment
         uses: ./.github/actions/setup-node
-
-      - name: Build API Doc
-        uses: ./.github/actions/build-api-doc
 
       - name: Get Version
         id: version
